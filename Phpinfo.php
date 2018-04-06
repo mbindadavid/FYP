@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style type="text/css"> 
+#popupbox{
+margin: 0; 
+margin-left: 20%; 
+margin-right: 40%;
+margin-top: 50px; 
+padding-top: 10px; 
+width: 40%; 
+height: 150px; 
+position: absolute; 
+ 
+border: solid #000000 2px; 
+z-index: 9; 
+font-family: arial; 
+visibility: visible; 
+}
+ </style>
+<title>Login Page</title>
+</head>
+<body bgcolor="green">
+   
+<form name="loginForm" method="post" action="login.php">
+<div class="centerDiv" id="popupbox">
+<table width="100%" bgcolor="0099CC" align="center">
+
+<tr>
+<td colspan=2><center><font size=4><b><i>Login Page</i></b></font></center></td>
+</tr>
+
+<tr>
+<td>Username:</td>
+<td><input type="text" size=10 name="userid"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="Password" size=15 name="pwd"></td>
+</tr>
+
+<tr>
+<td ><input type="Reset"></td>
+<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+</tr>
+
+</table>
+</div>
+</form>
+
+
+<script language="javascript">
+function check(form)
+{
+
+if(form.userid.value == "David" && form.pwd.value == "mbindadavid")
+{
+	return true;
+}
+else
+{
+	alert("Error Password or Username")
+	return false;
+}
+}
+function loginForm(showhide){
+if(showhide == "show"){
+    document.getElementById('popupbox').style.visibility="visible";
+}else if(showhide == "hide"){document.getElementById('popupbox').style.visibility="hidden"; 
+}
+}
+</script>
+
+</body>
+</html>
